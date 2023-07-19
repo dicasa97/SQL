@@ -1,0 +1,26 @@
+--Create a clothing inventory database
+
+CREATE TABLE clothinginventory(id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, color TEXT, needs INTEGER);
+INSERT INTO clothinginventory VALUES
+
+(1, "casual shirt", 6, "pink", 10),
+(2, "tank top", 8, "yellow", 5),
+(3, "casual dress", 10, "blue", 10),
+(4, "tshirts", 15, "purple", 10),
+(5, "shorts", 20, "white", 10),
+(6,"socks", 30, "black", 50),
+(7,"pants", 10, "beige", 30),
+(8, "belts", 5, "black", 10),
+(9, "jackets", 10, "green", 10),
+(10, "sweaters", 10, "red", 20),
+(11, "underwear", 5, "white", 50),
+(12, "skirts", 2, "black", 20),
+(13, "corset", 5, "white", 30),
+(14, "leggins", 10, "black", 40),
+(15, "shoes", 35, "orange", 60)
+;
+--display the database ordered by needs.
+SELECT* FROM clothinginventory ORDER BY needs;
+
+--how many products are currently available?
+SELECT SUM(quantity) FROM clothinginventory;
